@@ -1,7 +1,28 @@
 import React from 'react';
+import {
+  Route, Switch,
+} from 'react-router-dom';
+
+import MoviesPage from './pages/MoviesPage';
+import MovieDetailsPage from './pages/MovieDetailsPage';
 
 const App: React.FC = () => {
-  return <div>Merhaba</div>;
+
+  return (
+
+    <Switch>
+      <Route
+        exact
+        path="/"
+        component={MoviesPage}
+      />
+      <Route
+        exact
+        path="/movies-details"
+        component={MovieDetailsPage}
+      />
+    </Switch>
+  );
 };
 
 export default App;
