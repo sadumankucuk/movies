@@ -66,23 +66,23 @@ const MovieDetailsPage: React.FC<MovieProps> = ({
             </Col>
           </Row>
         ) : (
-            movie && (
-              <PageHeader
-                title={movie.Title}
-                className="site-page-header"
-                subTitle={movie.Director}
-                onBack={() => history.push('/')}
-                tags={<Tag color="blue">{movie.imdbRating}</Tag>}
-              >
-                <Row>
-                  <div style={{ flex: 1 }}>{content}</div>
-                  <div>
-                    <img src={movie.Poster} alt="content" width="100%" />
-                  </div>
-                </Row>
-              </PageHeader>
-            )
-          )}
+          movie && (
+            <PageHeader
+              title={movie.Title}
+              className="site-page-header"
+              subTitle={movie.Director}
+              onBack={() => history.push('/')}
+              tags={<Tag color="blue">{movie.imdbRating}</Tag>}
+            >
+              <Row>
+                <div style={{ flex: 1 }}>{content}</div>
+                <div>
+                  <img src={movie.Poster} alt="content" width="100%" />
+                </div>
+              </Row>
+            </PageHeader>
+          )
+        )}
       </>
     );
   } else {

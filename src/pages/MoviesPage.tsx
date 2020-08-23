@@ -56,13 +56,12 @@ const MoviesPage: React.FC<MoviesProps> = ({
       setPage((current * 5) / 10);
     } else {
       setSlice(0);
-      setPage(Math.trunc(((current * 5) / 10) + 1));
+      setPage(Math.trunc((current * 5) / 10 + 1));
     }
   };
 
   return (
     <>
-
       <Input.Search
         placeholder="input search text"
         size="large"
@@ -83,7 +82,6 @@ const MoviesPage: React.FC<MoviesProps> = ({
           onClick: () => history.push(`/movie/${record.imdbID}`),
         })}
       />
-
     </>
   );
 };
@@ -93,14 +91,13 @@ const mapStateToProps = (state: AppState) => {
   return {
     loadingMovies,
     movies,
-    totalMovies
+    totalMovies,
   };
 };
 
 const mapDispatchToProps = (dispatch: Dispatch<AnyAction>) => ({
   dispatch,
   ...bindActionCreators({ getMovieList }, dispatch),
-
 });
 
 type MoviesProps = ReturnType<typeof mapStateToProps> &
