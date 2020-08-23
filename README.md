@@ -1,7 +1,7 @@
 # React JS - Redux - Typescript Simple Project
 
 * API - [http://www.omdbapi.com/] (OMDb API)
-* Movies - [Demo]()
+* Movies - [Demo](https://react-typescript-movies.netlify.app/#/)
 
 ### How to use
 
