@@ -1,15 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter as Router, Switch } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { store } from './redux/store/store';
+import 'antd/dist/antd.css';
+
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <Router>
-    <Switch>
-      <App />
-    </Switch>
-  </Router>,
+  <Provider store={store}>
+    <Router>
+      <Switch>
+        <App />
+      </Switch>
+    </Router>
+  </Provider>,
   document.getElementById('root')
 );
 
