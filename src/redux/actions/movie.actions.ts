@@ -20,7 +20,7 @@ export const getMovieList = (page: number, movieName: string) => {
     return (dispatch: Dispatch) => {
         dispatch({ type: EReduxActionTypes.FETCHING_MOVIE_LIST });
         axios
-            .get('http://www.omdbapi.com', {
+            .get('https://www.omdbapi.com', {
                 params: {
                     apikey: apikey,
                     s: movieName,
@@ -67,7 +67,7 @@ export const getMovie = (imdbID: any) => {
     return (dispatch: Dispatch) => {
         dispatch({ type: EReduxActionTypes.FETCHING_MOVIE });
         axios
-            .get('http://www.omdbapi.com', {
+            .get('https://www.omdbapi.com', {
                 params: {
                     i: imdbID,
                     apikey: apikey
